@@ -13,9 +13,7 @@ public class Simulacao {
         opala.acelerar();
         opala.acelerar();
         opala.acelerar();
-        
-        opala.setVelocidade(-60);
-        
+
         radar.avaliarVelociade(opala);
     }
 }   
