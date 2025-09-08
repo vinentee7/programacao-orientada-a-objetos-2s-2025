@@ -6,8 +6,6 @@ public class Simulacao {
 
         Radar radar = new Radar("Pistão Sul", 60);
 
-        radar.avaliarVelociade(opala);
-
         opala.acelerar();
         opala.acelerar();
         opala.acelerar();
@@ -15,7 +13,7 @@ public class Simulacao {
         opala.acelerar();
         opala.acelerar();
         opala.acelerar();
-
+        
         radar.avaliarVelociade(opala);
     }
 }   
