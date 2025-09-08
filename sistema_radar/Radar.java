@@ -17,10 +17,10 @@ public class Radar {
     }
 
     public void avaliarVelociade(Carro carro){
-        if(carro.velocidade > this.limiteVelocidade) {
-            emitirnotificacao(carro.placa, carro.velocidade);
+        if(carro.getVelocidade() > this.limiteVelocidade) {
+            emitirnotificacao(carro.placa, carro.getVelocidade());
         } else {
-            System.out.println("Velocidade: "+carro.velocidade+" Km/h");
+            System.out.println("Velocidade: "+carro.getVelocidade()+" Km/h");
         }
     }
 }
