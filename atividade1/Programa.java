@@ -11,35 +11,35 @@ public class Programa {
         this.quantidadeOperacoes = quantidadeOperacoes;
     }
 
-    public void getmemoriaRAMAlocada () {
+    public Integer getmemoriaRAMAlocada () {
         return this.memoriaRAMAlocada;
     }
 
-    public Integer setmemoriaRAMAlocada (Integer memoriaRAMAlocada) {
+    public void setmemoriaRAMAlocada (Integer memoriaRAMAlocada) {
         this.memoriaRAMAlocada = memoriaRAMAlocada;
     }
-
-    public void getSSDOcupado () {
+    
+    public Integer getSSDOcupado () {
         return this.SSDOcupado;
     }
 
-    public Integer seSSDOcupado (Integer SSDOcupado) {
+    public void seSSDOcupado (Integer SSDOcupado) {
         this.SSDOcupado = SSDOcupado;
     }
 
-    public void getnucleos () {
+    public Integer getnucleos () {
         return this.nucleos;
     }
 
-    public Integer setnucleos (Integer nucleos) {
+    public void setnucleos (Integer nucleos) {
         this.nucleos = nucleos;
     }
 
-    public void getquantidadeOperacoes () {
+    public Integer getquantidadeOperacoes () {
         return this.quantidadeOperacoes;
     }
 
-    public Integer setquantidadeOperacoes (Integer quantidadeOperacoes) {
+    public void setquantidadeOperacoes (Integer quantidadeOperacoes) {
         this.quantidadeOperacoes = quantidadeOperacoes;
     }
 }

@@ -2,44 +2,44 @@ public class Computador {
     private Integer memoriaRam;
     private Integer SSD;
     private Integer nucleos;
-    private Float operacoesPorSegundo;
+    private Double operacoesPorSegundo;
 
-    public Computador (Integer memoriaRam, Integer SSD, Integer nucleos, Float operacoesPorSegundo) {
+    public Computador (Integer memoriaRam, Integer SSD, Integer nucleos, Double operacoesPorSegundo) {
         this.memoriaRam = memoriaRam;
-        this.SSD = SDD;
+        this.SSD = SSD;
         this.nucleos = nucleos;
         this.operacoesPorSegundo = operacoesPorSegundo;
     }
 
-    public void getmemoriaRam () {
+    public Integer getmemoriaRam () {
         return this.memoriaRam;
     }
 
-    public Integer setmemoriaRam (Integer memoriaRam) {
+    public void setmemoriaRam (Integer memoriaRam) {
         this.memoriaRam = memoriaRam;
     }
 
-    public void getSSD () {
-        return this.SDD;
+    public Integer getSSD () {
+        return this.SSD;
     }
 
-    public Integer setSDD (Integer SDD) {
+    public void setSDD (Integer SDD) {
         this.SSD = SDD;
     }
     
-    public void getnucleos () {
+    public Integer getnucleos () {
         return this.nucleos;
     }
 
-    public Integer setnucleos (Integer nucleos) {
+    public void setnucleos (Integer nucleos) {
         this.nucleos = nucleos;
     }
 
-    public void getoperacaoesPorSegundo () {
+    public Double getoperacaoesPorSegundo () {
         return this.operacoesPorSegundo;
     }
 
-    public Float setoperacoesPorSegundo (Float operacoesPorSegundo) {
+    public void setoperacoesPorSegundo (Double operacoesPorSegundo) {
         this.operacoesPorSegundo = operacoesPorSegundo;
     }
     
