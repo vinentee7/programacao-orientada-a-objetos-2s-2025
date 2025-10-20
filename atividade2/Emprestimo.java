@@ -1,32 +1,32 @@
 package atividade2;
 
 public class Emprestimo {
-    private Pessoa pessoa;
-    private Material material;
+    private TomadorEmprestimo tomadorEmprestimo;
+    private ItemEmprestavel itemEmprestavel;
     private String dataEmprestimo;
     private String dataDevolucao;
 
-    public Emprestimo(Pessoa pessoa, Material material, String dataEmprestimo, String dataDevolucao) {
-        this.pessoa = pessoa;
-        this.material = material;
+    public Emprestimo(TomadorEmprestimo tomadorEmprestimo, ItemEmprestavel itemEmprestavel, String dataEmprestimo, String dataDevolucao) {
+        this.tomadorEmprestimo = tomadorEmprestimo;
+        this.itemEmprestavel = itemEmprestavel;
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
     }
 
-    public Pessoa getPessoa() {
-        return this.pessoa;
+    public TomadorEmprestimo getTomadorEmprestimo() {
+        return this.tomadorEmprestimo;
     }
 
-    public void setPessoa(Pessoa pessoa) {
-        this.pessoa = pessoa;
+    public void setTomadorEmprestimo(TomadorEmprestimo tomadorEmprestimo) {
+        this.tomadorEmprestimo = tomadorEmprestimo;
     }
 
-    public Material getMaterial() {
-        return this.material;
+    public ItemEmprestavel getItemEmprestavel() {
+        return this.itemEmprestavel;
     }
 
-    public void setMaterial(Material material) {
-        this.material = material;
+    public void setItemEmprestavel(ItemEmprestavel itemEmprestavel) {
+        this.itemEmprestavel = itemEmprestavel;
     }
 
     public String getDataEmprestimo() {
@@ -48,9 +48,9 @@ public class Emprestimo {
     public void exibirDetalhes() {
         System.out.println("Data do empréstimo: " + this.dataEmprestimo);
         System.out.println("Data de devolução: " + this.dataDevolucao);
-        System.out.println("===Pessoa vinculada===");
-        this.pessoa.exibirInfo();
-        System.out.println("===Material vinculado===");
-        this.material.descricao();
+        System.out.println("===TomadorEmprestimo vinculada===");
+        this.tomadorEmprestimo.exibirInfo();
+        System.out.println("===ItemEmprestavel vinculado===");
+        this.itemEmprestavel.descricao();
     }
 }
