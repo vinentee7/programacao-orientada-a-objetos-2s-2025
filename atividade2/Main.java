@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Scanner sc = new Scanner(System.in);
 
         ArrayList<Pessoa> pessoas = new ArrayList<>();
@@ -43,8 +43,17 @@ public class Main {
                     System.out.print("Matrícula: ");
                     int matricula = sc.nextInt();
                     sc.nextLine();
-                    pessoas.add(new Usuario(nomeU, emailU, matricula));
-                    System.out.println("Usuário cadastrado com sucesso!\n");
+                    try {
+                        pessoas.add(new Usuario(nomeU, emailU, matricula));
+                        System.out.println("Usuário cadastrado com sucesso!\n");
+                    } catch (NomeInvalidoException e) {
+                        System.out.println("Nome invalido");
+                    } catch (EmailInvalidoException e){
+                        System.out.println("Email invalido");
+                    } catch (Exception e) {
+                        System.out.println("Algo deu errado.tente novamente");
+                    }
+                    
                     break;
 
                 case 2:
@@ -122,10 +131,15 @@ public class Main {
                     System.out.print("Data de devolução: ");
                     String dataD = sc.nextLine();
 
-                    emprestimos.add(new Emprestimo(pessoas.get(idxUsuario),
-                                                   materiais.get(idxMaterial),
-                                                   dataE, dataD));
-                    System.out.println("Empréstimo cadastrado!\n");
+                    try {
+                        emprestimos.add(new Emprestimo(pessoas.get(idxUsuario),
+                                                    materiais.get(idxMaterial),
+                                                    dataE, dataD));
+                        System.out.println("Empréstimo cadastrado!\n");                       
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("Escolha uma opcao valida na lista de pessoas e materiais");
+                    }
+
                     break;
 
                 case 8:
